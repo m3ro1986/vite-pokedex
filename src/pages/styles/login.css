@@ -1,0 +1,8 @@
+.login figure {
+    height: 300px;
+    width: 250px;
+    background-image: url('/tr1.webp');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,26 @@
+.pokedex-header > header {
+    width: 100vw;
+    height: 5em;
+    background-image: url('/bg4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 2em;
+}
+
+.pokedex-header > header > div {
+    width: 100%;
+    height: 100%;
+    background-image: url('/logo.svg');
+    background-position: 1em;
+    background-size: 25em;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+    padding-bottom: 2em;
+}
+
+@media screen and ( max-width: 425px ){
+    .pokedex-header > header > div {
+        background-size: 15em;
+    }
+}
