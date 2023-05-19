@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { getAllPokemonsThunk } from '../store/slices/allPokemons.slice'
 import './styles/pokedexForm.css'
 import { useDispatch, useSelector } from 'react-redux'
+import Config from './Config'
 
 const PokedexForm = () => {
 
@@ -28,29 +29,31 @@ const PokedexForm = () => {
   }
 
   return (
-    <div className='pokedex-form'>
-      <div className='pokedex-form__welcome'>
-        <p>Welcome <span>{trainerName}</span>, here you can find your favorite POKEMON!</p>
-        <i className='bx bxs-cog'></i>
-      </div>
-      <div className='pokedex-form__options'>
-        <form onSubmit={handleSubmit}>
-          <input type="text" />
-          <button>Search</button>
-        </form>
-        <div>
-          <span>Choose Type</span>
-          <select onChange={handleChange}>
-            <option value="all">all-Pokemons</option>
-            {
-              pokemonTypes.map(type => (
-                <option value={type.name} key={type.name}> {type.name} </option>
-              ))
-            }
-          </select>
+    <>
+      <div className='pokedex-form'>
+        <div className='pokedex-form__welcome'>
+          <p>Welcome <span>{trainerName}</span>, here you can find your favorite POKEMON!</p>
+          <i className='bx bxs-cog'></i>
+        </div>
+        <div className='pokedex-form__options'>
+          <form onSubmit={handleSubmit}>
+            <input type="text" />
+            <button>Search</button>
+          </form>
+          <div>
+            <span>Choose Type</span>
+            <select onChange={handleChange}>
+              <option value="all">all-Pokemons</option>
+              {
+                pokemonTypes.map(type => (
+                  <option value={type.name} key={type.name}> {type.name} </option>
+                ))
+              }
+            </select>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
