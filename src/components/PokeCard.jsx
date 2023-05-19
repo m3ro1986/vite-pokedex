@@ -2,18 +2,23 @@ import { useEffect, useState } from 'react'
 import './styles/pokeCard.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { setLoading } from '../store/slices/loading.slice'
 
 const PokeCard = ({ url }) => {
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   const [pokemon, setPokemon] = useState()
 
   useEffect(() => {
+    // dispatch( setLoading( true ))
     axios.get(url)
       .then(res => {
         setPokemon(res.data)
       })
       .catch(() => alert('err in fetch pokemon'))
+      // .finally( () => dispatch(setLoading( false )))
   })
 
   const gif = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon?.id}.gif`

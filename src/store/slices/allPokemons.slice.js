@@ -15,7 +15,7 @@ export const getAllPokemonsThunk = (url) => dispatch => {
     axios.get(url)
         .then( res => dispatch( getAllPokemons( res.data.results ? res.data.results : res.data.pokemon ) ) )
         .catch( () => alert('error in fetching allPokemosThunk'))
-        .finally( dispatch( setLoading( false ) ) )
+        .finally( () => dispatch( setLoading( false ) ) )
 }
 
 export const { getAllPokemons } = allPokemonsSlice.actions

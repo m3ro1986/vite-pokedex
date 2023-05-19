@@ -2,7 +2,9 @@ import './styles/loader.css'
 
 const Loader = () => {
   return (
-    <div>Loader</div>
+    <div className='loader'>
+      <div className="lds-ripple"><div></div><div></div></div>
+    </div>
   )
 }
 

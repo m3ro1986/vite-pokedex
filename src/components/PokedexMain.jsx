@@ -7,7 +7,7 @@ const PokedexMain = () => {
 
   const { allPokemons } = useSelector( state => state )
   const [offset, setOffset] = useState(0)
-  const [limit, setLimit] = useState(20)
+  const [limit, setLimit] = useState(40)
 
   return (
     <div className='pokedex-main'>
