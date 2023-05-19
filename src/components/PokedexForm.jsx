@@ -4,7 +4,7 @@ import './styles/pokedexForm.css'
 import { useDispatch, useSelector } from 'react-redux'
 import Config from './Config'
 
-const PokedexForm = () => {
+const PokedexForm = ({handleOpen}) => {
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -33,7 +33,7 @@ const PokedexForm = () => {
       <div className='pokedex-form'>
         <div className='pokedex-form__welcome'>
           <p>Welcome <span>{trainerName}</span>, here you can find your favorite POKEMON!</p>
-          <i className='bx bxs-cog'></i>
+          <i className='bx bxs-cog' onClick={handleOpen}></i>
         </div>
         <div className='pokedex-form__options'>
           <form onSubmit={handleSubmit}>
