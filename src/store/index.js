@@ -6,6 +6,7 @@ import loading from './slices/loading.slice'
 import pokemonList from './slices/pokemonList.slice'
 import pokemonTypes from './slices/pokemonTypes.slice'
 import limit from './slices/limit.slice'
+import offset from './slices/offset.slice'
 
 export default configureStore({
     reducer: {
@@ -14,6 +15,7 @@ export default configureStore({
         allPokemons,
         pokemonList,
         pokemonTypes,
-        limit
+        limit,
+        offset
     }   
 })

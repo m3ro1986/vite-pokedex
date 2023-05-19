@@ -8,6 +8,7 @@ const Config = ({ handleOpen, isOpen }) => {
   
   const handleClick = (n) => {
     dispatch(setLimit(n))
+    handleOpen()
   }
 
   return (

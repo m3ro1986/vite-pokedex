@@ -5,9 +5,7 @@ import PokeCard from './PokeCard'
 
 const PokedexMain = () => {
 
-  const { allPokemons, limit } = useSelector( state => state )
-  const [offset, setOffset] = useState(0)
-  // const [limit, setLimit] = useState(40)
+  const { allPokemons, limit, offset } = useSelector( state => state )
 
   return (
     <div className='pokedex-main'>
