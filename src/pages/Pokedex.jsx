@@ -24,6 +24,7 @@ const Pokedex = () => {
             <PokedexForm handleOpen={handleOpen}/>
             <Pagination/>
             <PokedexMain/>
+            <Pagination/>
         </div>
     )
 }

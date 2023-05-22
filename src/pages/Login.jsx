@@ -17,7 +17,6 @@ const Login = () => {
     navigate( '/pokedex' )
   }
 
-  console.log( 'log in login')
   return (
     <div className='login'>
       <header>

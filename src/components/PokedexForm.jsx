@@ -2,7 +2,9 @@ import { useNavigate } from 'react-router-dom'
 import { getAllPokemonsThunk } from '../store/slices/allPokemons.slice'
 import './styles/pokedexForm.css'
 import { useDispatch, useSelector } from 'react-redux'
-import Config from './Config'
+import { setIndex } from '../store/slices/index.slice'
+import { setLimit } from '../store/slices/limit.slice'
+import { setOffset } from '../store/slices/offset.slice'
 
 const PokedexForm = ({handleOpen}) => {
 
@@ -28,6 +30,7 @@ const PokedexForm = ({handleOpen}) => {
     ))
     dispatch(setLimit(perPage))
     dispatch(setOffset(0))
+    dispatch(setIndex(0))
   }
 
   return (

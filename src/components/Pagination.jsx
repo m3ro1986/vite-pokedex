@@ -51,9 +51,6 @@ const Pagination = () => {
     }
 
 
-
-
-    console.log(perPage, limit, qtyPokemons, qtyButtons, indexs, paginationBtns()[1])
     return (
         <div className='pagination'>
             {
