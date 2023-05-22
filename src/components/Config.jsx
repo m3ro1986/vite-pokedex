@@ -1,13 +1,18 @@
 import { useDispatch } from 'react-redux'
 import './styles/config.css'
+import { setPerPage } from '../store/slices/perPage.slice'
 import { setLimit } from '../store/slices/limit.slice'
+import { setOffset } from '../store/slices/offset.slice'
+
 
 const Config = ({ handleOpen, isOpen }) => {
 
   const dispatch = useDispatch()
   
   const handleClick = (n) => {
+    dispatch(setPerPage(n))
     dispatch(setLimit(n))
+    dispatch(setOffset(0))
     handleOpen()
   }
 

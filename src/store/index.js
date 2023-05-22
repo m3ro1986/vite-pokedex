@@ -7,6 +7,8 @@ import pokemonList from './slices/pokemonList.slice'
 import pokemonTypes from './slices/pokemonTypes.slice'
 import limit from './slices/limit.slice'
 import offset from './slices/offset.slice'
+import perPage from './slices/perPage.slice'
+import index from './slices/index.slice'
 
 export default configureStore({
     reducer: {
@@ -16,6 +18,9 @@ export default configureStore({
         pokemonList,
         pokemonTypes,
         limit,
-        offset
+        offset,
+        perPage,
+        index
+
     }   
 })

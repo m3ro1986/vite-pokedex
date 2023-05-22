@@ -8,7 +8,7 @@ const PokedexForm = ({handleOpen}) => {
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const { trainerName, pokemonTypes, pokemonList } = useSelector(state => state)
+  const { perPage, trainerName, pokemonTypes, pokemonList } = useSelector(state => state)
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -26,6 +26,8 @@ const PokedexForm = ({handleOpen}) => {
         ? 'https://pokeapi.co/api/v2/pokemon/?limit=1281'
         : `https://pokeapi.co/api/v2/type/${e.target.value}`
     ))
+    dispatch(setLimit(perPage))
+    dispatch(setOffset(0))
   }
 
   return (

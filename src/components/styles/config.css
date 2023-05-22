@@ -30,4 +30,10 @@
 .config__manage {
     background-color: whitesmoke;
     padding: 2em;
+    & h3{
+        color: #888;
+    }
+    & p{
+        color: #888;
+    }
 }
